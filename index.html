@@ -1,0 +1,657 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Mansi ❤️ | From Dev</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Playfair+Display:ital,wght@0,500;1,500&family=DM+Sans:wght@400;500;700&display=swap');
+
+:root {
+  --plum: #200d2c;
+  --pink: #ffb6d9;
+  --cotton: #ffe1f0;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(ellipse at top, #673361 0%, transparent 55%),
+    var(--plum);
+  color: #fff7fc;
+  font-family: 'DM Sans', sans-serif;
+}
+
+main {
+  width: min(720px, 92%);
+  margin: auto;
+}
+
+section {
+  padding: 70px 0;
+  text-align: center;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1, h2, .script {
+  font-family: 'Dancing Script', cursive;
+}
+
+h1 {
+  font-size: clamp(65px, 14vw, 110px);
+  color: var(--cotton);
+  margin: 15px 0;
+  text-shadow: 0 0 35px #ffb6d966;
+}
+
+h2 {
+  color: var(--pink);
+  font-size: clamp(38px, 9vw, 58px);
+  margin: 12px 0 24px;
+}
+
+h3 {
+  font-family: 'Dancing Script', cursive;
+  color: var(--pink);
+  font-size: 28px;
+}
+
+.eyebrow {
+  color: var(--pink);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 11px;
+}
+
+.subtitle {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  line-height: 1.9;
+  color: #e8d0e9;
+}
+
+.btn {
+  background: linear-gradient(135deg, #ffb6d9, #dfb7ff);
+  border: 0;
+  padding: 15px 24px;
+  border-radius: 40px;
+  color: #351332;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 10px 0;
+  font-size: 14px;
+  transition: transform .2s;
+}
+
+.btn:hover { transform: translateY(-3px); }
+
+.card {
+  text-align: left;
+  background: #ffffff09;
+  border: 1px solid #ffb6d933;
+  padding: clamp(20px, 5vw, 36px);
+  border-radius: 24px;
+  backdrop-filter: blur(8px);
+}
+
+.message {
+  line-height: 2;
+  font-size: 15px;
+}
+
+.signature {
+  color: var(--pink);
+  font: 28px 'Dancing Script', cursive;
+  margin-top: 25px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.photo {
+  background: #fff0f8;
+  color: #492346;
+  padding: 8px;
+  border-radius: 13px;
+  transform: rotate(-2deg);
+}
+
+.photo:nth-child(2) {
+  transform: rotate(2deg);
+  margin-top: 25px;
+}
+
+.photo:nth-child(3) {
+  grid-column: 1 / -1;
+  width: 80%;
+  justify-self: center;
+}
+
+.photo img {
+  display: block;
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.photo:nth-child(3) img { height: 340px; }
+
+.photo figcaption {
+  font: 22px 'Dancing Script', cursive;
+  padding: 12px 2px 7px;
+}
+
+.reasons {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  text-align: left;
+}
+
+.reason {
+  padding: 19px 15px;
+  border-radius: 18px;
+  background: #ffffff08;
+  border: 1px solid #ffb6d925;
+}
+
+.reason .emoji { font-size: 27px; }
+
+.reason h3 { margin: 10px 0; }
+
+.reason p {
+  font-size: 13px;
+  color: #e8d5e8;
+  line-height: 1.8;
+}
+
+.music {
+  text-align: center;
+  background: linear-gradient(140deg, #69335c66, #ffffff05);
+}
+
+.disc {
+  margin: 10px auto 25px;
+  width: 155px;
+  height: 155px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 45px;
+  background: repeating-radial-gradient(
+    circle, #4c2054 0 8px, #784576 9px 11px
+  );
+  box-shadow: 0 0 35px #ffb6d933;
+  animation: spin 12s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+audio {
+  width: 100%;
+  margin: 18px 0;
+}
+
+.secret-paper {
+  display: none;
+  text-align: left;
+  background: linear-gradient(140deg, #fff0f8, #f1dafa);
+  color: #492346;
+  padding: clamp(20px, 5vw, 35px);
+  border-radius: 20px;
+  margin-top: 25px;
+  animation: appear .7s ease;
+}
+
+.secret-paper h2 { color: #a03e80; text-align: center; }
+
+.secret-paper .message { color: #492346; }
+
+.secret-paper .signature { color: #a03e80; }
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: .8s;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+footer {
+  padding: 40px 0 55px;
+  text-align: center;
+  color: #d8bedb;
+  font-size: 13px;
+  line-height: 2;
+}
+
+footer .script {
+  color: var(--pink);
+  font-size: 30px;
+}
+
+#stars {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.star {
+  position: absolute;
+  color: var(--pink);
+  animation: twinkle 3s infinite alternate;
+}
+
+@keyframes twinkle {
+  from { opacity: .15; }
+  to { opacity: .8; }
+}
+
+@media(max-width:480px) {
+  section { padding: 52px 0; }
+  .photo img { height: 200px; }
+  .photo:nth-child(3) img { height: 270px; }
+  .reason { padding: 14px 11px; }
+  .reason p { font-size: 12px; }
+}
+</style>
+</head>
+
+<body>
+<div id="stars"></div>
+
+<main>
+
+<!-- WELCOME -->
+<section class="hero">
+  <div style="font-size:38px">🎀</div>
+  <p class="eyebrow">A little surprise made with love</p>
+  <h1>Hey, Mansi!</h1>
+  <p class="subtitle">
+    For my favourite person, my prettiest thought,
+    and the girl who makes ordinary days feel special. ❤️
+  </p>
+  <p style="color:#ffb6d9">✦ ♡ ✦ ♡ ✦</p>
+  <button class="btn" onclick="goTo('letter')">
+    Open your little surprise 💌
+  </button>
+  <p class="subtitle">Made with love, by your Dev 🤍</p>
+</section>
+
+<!-- YOUR SPECIAL MESSAGE -->
+<section id="letter" class="reveal">
+  <p class="eyebrow">Chapter one · From my heart</p>
+  <h2>A letter for you 💌</h2>
+
+  <div class="card message">
+    <p>Hey Mansi, meri favourite person! 🎀❤️</p>
+
+    <p>Sooo… I made something special for you! 🥹✨</p>
+
+    <p>Pata hai, main koi perfect boyfriend toh nahi hoon,
+    but tumhare face par smile laane ki koshish hamesha
+    kar sakta hoon. ❤️</p>
+
+    <p>Tum meri life ka woh beautiful part ho jiske baare
+    mein sochkar bina kisi reason ke smile aa jaati hai.
+    Your texts, your little talks, your cute si baatein…
+    everything means more to me than you know. 🫶🏻</p>
+
+    <p>I don't need a special occasion to make you feel
+    special, because you are special to me every single day. 💗</p>
+
+    <p>Aur haan, madam ji! 😂💕 Itni mehnat ki hai,
+    toh smile karna compulsory hai!</p>
+
+    <p>I hope this little surprise makes your day a little
+    brighter, just like you make mine. 🌷</p>
+
+    <p>Always remember, Mansi — you're not just someone I love,
+    you're someone I'm genuinely grateful to have in my life.
+    ❤️🧿</p>
+
+    <div class="signature">With lots of love,<br>Your Dev 🤍</div>
+  </div>
+</section>
+
+<!-- PHOTO GALLERY -->
+<section id="memories" class="reveal">
+  <p class="eyebrow">Chapter two · Little memories</p>
+  <h2>Our little world 📸</h2>
+
+  <p class="subtitle">
+    Some pictures, some memories, and one girl who makes
+    everything a little more beautiful. 💗
+  </p>
+
+  <div class="gallery">
+    <figure class="photo">
+      <img src="a1.jpeg" alt="Our memory one">
+      <figcaption>My favourite kind of moment ♡</figcaption>
+    </figure>
+
+    <figure class="photo">
+      <img src="a2.jpeg" alt="Our memory two">
+      <figcaption>A memory worth keeping 🎀</figcaption>
+    </figure>
+
+    <figure class="photo">
+      <img src="a3.jpeg" alt="Our memory three">
+      <figcaption>Us, in our own little world 🤍</figcaption>
+    </figure>
+  </div>
+
+  <p class="subtitle" style="margin-top:30px">
+    "Out of all the moments life could give me,
+    I'm glad some of them have you in them." ❤️
+  </p>
+</section>
+
+<!-- WHY SHE IS BEAUTIFUL -->
+<section id="beautiful" class="reveal">
+  <p class="eyebrow">Chapter three · My favourite girl</p>
+  <h2>Why you're so beautiful ✨</h2>
+
+  <p class="subtitle">
+    Mansi, beauty is so much more than what a mirror can show.
+    Here are a few reasons you're so special to me.
+  </p>
+
+  <div class="reasons">
+    <div class="reason">
+      <div class="emoji">🌷</div>
+      <h3>Your smile</h3>
+      <p>Just imagining you smiling can make my day brighter.
+      Never stop smiling, okay?</p>
+    </div>
+
+    <div class="reason">
+      <div class="emoji">🦋</div>
+      <h3>Your little ways</h3>
+      <p>Your cute si baatein, your expressions and the tiny
+      things that make you uniquely you.</p>
+    </div>
+
+    <div class="reason">
+      <div class="emoji">💗</div>
+      <h3>Your heart</h3>
+      <p>It's not only how you look. It's the person you are
+      and the place you hold in my heart.</p>
+    </div>
+
+    <div class="reason">
+      <div class="emoji">🌙</div>
+      <h3>Your presence</h3>
+      <p>Sometimes just talking to you makes an ordinary
+      day feel a little more magical.</p>
+    </div>
+
+    <div class="reason">
+      <div class="emoji">🎀</div>
+      <h3>Your uniqueness</h3>
+      <p>There's nobody else exactly like you. And that's
+      one of the loveliest things about you.</p>
+    </div>
+
+    <div class="reason">
+      <div class="emoji">🫶🏻</div>
+      <h3>The real you</h3>
+      <p>You don't have to be perfect to be precious to me.
+      Just be yourself, meri jaan.</p>
+    </div>
+  </div>
+
+  <div class="card" style="text-align:center;margin-top:20px">
+    <p class="subtitle">
+      I could write a thousand reasons and still feel
+      like I've left something out.
+    </p>
+    <div class="signature">Beautiful inside and out. ❤️</div>
+  </div>
+</section>
+
+<!-- HUMDARD MUSIC -->
+<section id="song" class="reveal">
+  <p class="eyebrow">Chapter four · Our song</p>
+  <h2>A song that feels like you 🎶</h2>
+
+  <div class="card music">
+    <div class="disc">❤️</div>
+
+    <p class="eyebrow">A song dedicated to you</p>
+    <h3 style="font-family:'Playfair Display',serif">
+      Humdard
+    </h3>
+    <p class="subtitle">Ek Villain · Arijit Singh</p>
+
+    <audio controls preload="metadata">
+      <source src="humdard.mp3" type="audio/mpeg">
+      Your browser does not support audio playback.
+    </audio>
+
+    <p class="message">
+      Some songs sound beautiful.<br>
+      Some songs remind you of someone.<br><br>
+      And then there's this one… ❤️
+    </p>
+
+    <p class="subtitle">
+      Whenever I listen to this song, I think of you, Mansi.
+      Maybe it's the feeling, maybe it's the melody, or maybe
+      my heart has simply connected this song with you.
+    </p>
+
+    <p class="subtitle">
+      Play it when you miss me a little.
+      I'll probably be thinking of you too. 🫂💗
+    </p>
+  </div>
+</section>
+
+<!-- SECRET MESSAGE -->
+<section id="secret" class="reveal">
+  <p class="eyebrow">The final chapter · Just between us</p>
+  <h2>One last little secret…</h2>
+
+  <div class="card" style="text-align:center">
+    <div id="lock" style="font-size:48px">🔐</div>
+    <h3 id="secretHeading">Ohooo, curious girl! 👀</h3>
+
+    <p class="subtitle">
+      There's one more message waiting for you.
+      This one's a little more personal.
+    </p>
+
+    <button class="btn" id="unlockBtn" onclick="unlockSecret()">
+      Unlock your secret letter 💌
+    </button>
+
+    <div class="secret-paper" id="secretLetter">
+      <p class="eyebrow" style="color:#a03e80">
+        Only for Mansi · With all my love
+      </p>
+
+      <h2>Just between us ❤️</h2>
+
+      <div class="message">
+        <p>Hey Mansi… ❤️</p>
+
+        <p>Agar tum yahan tak aa gayi ho, toh congratulations,
+        madam! 😂🎀 Tumne mera little secret unlock kar liya.</p>
+
+        <p>But jokes apart, there's something I really want
+        you to know…</p>
+
+        <p>Kabhi-kabhi mujhe samajh nahi aata ki apni feelings
+        ko words mein kaise explain karun. There are so many
+        little things about you that make you special to me,
+        and sometimes even a simple conversation with you can
+        make my whole day better. 🥹❤️</p>
+
+        <p>I may not always know the perfect things to say,
+        and I may not always express everything properly,
+        but one thing is true — what you mean to me is much
+        more than what I can put into words.</p>
+
+        <p>Main chahta hoon ki tum mere saath hamesha apni
+        real self reh sako. Khush ho toh mere saath haso,
+        pareshan ho toh mujhse baat kar sako, aur kabhi low
+        feel karo toh tumhe yaad rahe ki you don't have to
+        pretend to be okay all the time. 🫂💗</p>
+
+        <p>I can't promise that every day will be perfect,
+        but I want us to keep choosing honesty, understanding,
+        respect, and each other.</p>
+
+        <p>And Mansi, ek last baat…</p>
+
+        <p>Duniya mein bahut saare log milenge, but meri
+        favourite person banne ka title toh tumne already
+        le liya hai. No vacancy, madam ji! 😂❤️</p>
+
+        <p>I love you, Mansi. More than these words can
+        explain. ♾️🧿</p>
+
+        <div class="signature">— Yours, Dev ❤️</div>
+      </div>
+    </div>
+
+    <div id="finalSurprise" style="display:none">
+      <h3 style="font-size:32px">
+        I love you, meri favourite person! ❤️🧿
+      </h3>
+      <button class="btn" onclick="celebrate()">
+        One more hug? 🫂
+      </button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="script">For Mansi, always. ♡</div>
+  <p>
+    Made with love, by Dev.<br>
+    Midnight plum skies, cotton candy dreams,
+    and one very special girl. 🎀
+  </p>
+  <div style="font-size:22px">❤️ ✨ 🧿</div>
+</footer>
+
+</main>
+
+<script>
+// Twinkling stars
+const starBox = document.getElementById('stars');
+
+for (let i = 0; i < 45; i++) {
+  const s = document.createElement('span');
+  s.className = 'star';
+  s.textContent = Math.random() > .5 ? '✦' : '·';
+  s.style.left = Math.random() * 100 + '%';
+  s.style.top = Math.random() * 100 + '%';
+  s.style.fontSize = (8 + Math.random() * 14) + 'px';
+  s.style.animationDelay = Math.random() * 3 + 's';
+  starBox.appendChild(s);
+}
+
+// Reveal sections while scrolling
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.08 });
+
+document.querySelectorAll('.reveal').forEach(el => {
+  observer.observe(el);
+});
+
+// Smooth navigation
+function goTo(id) {
+  document.getElementById(id).scrollIntoView({
+    behavior: 'smooth'
+  });
+}
+
+// Reveal the secret love letter
+function unlockSecret() {
+  document.getElementById('secretLetter').style.display = 'block';
+  document.getElementById('unlockBtn').style.display = 'none';
+  document.getElementById('lock').textContent = '💌';
+  document.getElementById('secretHeading').textContent =
+    'Unlocked, meri favourite girl! ❤️';
+
+  document.getElementById('finalSurprise').style.display = 'block';
+
+  setTimeout(() => {
+    document.getElementById('secretLetter').scrollIntoView({
+      behavior: 'smooth',
+      block: 'nearest'
+    });
+  }, 150);
+}
+
+// Floating hearts celebration
+function celebrate() {
+  const emojis = ['❤️','💗','💕','💖','🫶🏻','🎀','✨'];
+
+  for (let i = 0; i < 30; i++) {
+    const h = document.createElement('span');
+    h.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+
+    Object.assign(h.style, {
+      position: 'fixed',
+      zIndex: 9999,
+      left: Math.random() * 100 + 'vw',
+      bottom: '-40px',
+      fontSize: '25px',
+      pointerEvents: 'none',
+      transition: 'transform 3s ease-out, opacity 3s ease-out'
+    });
+
+    document.body.appendChild(h);
+
+    requestAnimationFrame(() => {
+      h.style.transform =
+        `translateY(-${innerHeight + 100}px) rotate(30deg)`;
+      h.style.opacity = '0';
+    });
+
+    setTimeout(() => h.remove(), 3200);
+  }
+
+  document.getElementById('finalSurprise').querySelector('h3')
+    .textContent = 'Biggest virtual hug for you, Mansi! 🫂❤️🎀';
+}
+</script>
+
+</body>
+</html>
